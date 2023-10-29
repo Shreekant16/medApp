@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./static/styleHome.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">MEDAPP</h1>
+            <ul class="nav-links">
+                <button onclick="window.location.href='user_dashboard_main'">Dashboard</button>
+                <button onclick="window.location.href='homepage'">Logout</button>
+            </ul>
+        </div>
+    </nav>
+    <table>
+        <tr>
+            <th>Dr.Name</th>
+            <th>Date</th>
+            <th>Contact Dr. Follow up</th>
+        </tr>
+        {% for info in data %}
+        <tr>
+            <td>{{ info[1] }}</td>
+            <td>{{ info[2] }}</td>
+            <td>{{ dr_mobile_no }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

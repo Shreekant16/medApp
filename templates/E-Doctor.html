@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Doctor</title>
+    <link rel="stylesheet" href="./static/styleHome.css" />
+</head>
+<body>
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">MEDAPP</h1>
+        <ul class="nav-links">
+          <button onclick="window.location.href='homepage'">
+            Home
+          </button>
+        </ul>
+      </div>
+    </nav>
+    <form action="{{ url_for('edoctor') }}" method="post">
+        <label >Tell me your Symptoms :</label>
+        <textarea id="symptoms" name="symptoms" rows="10" cols="77" required></textarea><br><br>
+        <input type="submit" value="Get Report">
+    </form>
+    <div class="prescription">
+        <h1>E-Doctor's Report</h1>
+        <p>
+            {{ message1 }}
+        </p>
+        <p>
+            {{ message2 }}
+        </p>
+        <p>
+            {{ message3 }}
+        </p>
+
+        {% for p in pre %}
+            <strong>{{ p }}</strong>
+
+        {% endfor %}
+        <h2>But I'll suggest Visiting Nearest Doctor</h2>
+    </div>
+    <footer class="footer">
+          <div class="container">
+            <p>&copy; 2023 MedApp. All Rights Reserved.</p>
+          </div>
+        </footer>
+
+</body>
+</html>

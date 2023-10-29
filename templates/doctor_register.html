@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/styleHome1.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">MEDAPP</h1>
+            <ul class="nav-links">
+                <button onclick="window.location.href='homepage'">Home</button>
+            </ul>
+        </div>
+    </nav>
+
+    <form action="{{ url_for('doctor_register') }}" method="post">
+        <label for="name">Doctor Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="reg_no">Registration Number:</label>
+        <input type="text" id="reg_no" name="reg_no" required><br><br>
+
+        <label for="hospital">Hospital :</label>
+        <input type="text" id="hospital" name="hospital" required><br><br>
+
+        <label for="area_code">Area Code:</label>
+        <input type="text" id="area_code" name="area_code" required><br><br>
+
+        <label for="specialty">Specialty:</label>
+        <input type="text" id="specialty" name="specialty" required><br><br>
+
+        <label >Mobile No :</label>
+        <input type="text" id="mobile" name="mobile" required><br><br>
+        <input type="submit" value="Register">
+    </form>
+
+    <p>Already have an account? <a href="doctor_login">Login here</a>.</p>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 MedApp. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

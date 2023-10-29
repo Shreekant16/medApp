@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doctor_dashboard</title>
+    <link rel="stylesheet" href="./static/styleHome.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">MEDAPP</h1>
+            <ul class="nav-links">
+                <button onclick="window.location.href='patient_history'">Patient-History</button>
+                <button onclick="window.location.href='homepage'">Logout</button>
+            </ul>
+        </div>
+    </nav>
+<form action="{{ url_for('doctor_dashboard') }}" method="post">
+    <input type="text" id="live" name="live" style="display:none;" value="live" required><br><br>
+    <input type="submit" value="Go Live" class="special-button">
+</form>
+<a href="meeting">Meeting</a>
+<h5>***If Done with Patients Then Click Go Live on the Patient to go live Again***</h5>
+<table>
+    <tr>
+        <th>Patients</th>
+        <th></th>
+    </tr>
+    {% for info in data %}
+    <tr>
+        <td>{{ info[0] }}</td>
+        <td><a href="prescription">Generate Prescription</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
