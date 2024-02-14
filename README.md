@@ -15,7 +15,7 @@ AWS Lex
 AWS Lambda
 
 Getting Started
-Clone the Repository: git clone https://github.com/yourusername/doctor-appointment.git
+Clone the Repository: git clone https://github.com/Shreekant16/medApp.git
 Install Dependencies: pip install -r requirements.txt
 Run the Application: python manage.py runserver
 Access the Application: http://localhost:8000
