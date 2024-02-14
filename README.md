@@ -24,3 +24,7 @@ Usage
 Virtual Appointment Booking: Follow chatbot prompts.
 E-Doctor Service: Input symptoms for recommendations.
 Physical Appointment Booking: Follow chatbot prompts.
+
+final connection between webpages is remianing but can see the demo:
+
+https://github.com/Shreekant16/medApp/assets/111984571/27440e4b-26e5-4c5f-b4ef-0f3130468b7f
